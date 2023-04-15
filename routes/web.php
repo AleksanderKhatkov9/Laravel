@@ -16,14 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "App\Http\Controllers\MapController@index");
 Route::get('/map', "App\Http\Controllers\MapController@runMap");
 Route::post('/map/save', "App\Http\Controllers\MapController@create");
-Route::get('/edit/{id}', "App\Http\Controllers\MapController@edit")->name('post');
+Route::get('/edit', "App\Http\Controllers\MapController@edit");
+Route::post('/map/update', "App\Http\Controllers\MapController@update");
+Route::post('/map/delete', "App\Http\Controllers\MapController@destroy");
+Route::get('/test', "App\Http\Controllers\MapController@test");
 
-
-Route::post('/map/update', "App\Http\Controllers\UserController@update");
-Route::post('/map/delete', "App\Http\Controllers\UserController@destroy");
-
-
-Route::get('/get', "App\Http\Controllers\MapController@getMap")->name('list');
 
 
 

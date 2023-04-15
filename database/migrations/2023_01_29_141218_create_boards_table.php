@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('file', 500);
             $table->text('content');
-            $table->string('location',500);
+            $table->string('point',500);
             $table->timestamps();
         });
     }
